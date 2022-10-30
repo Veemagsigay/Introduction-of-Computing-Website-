@@ -1,0 +1,52 @@
+<html> 
+<head> 
+<label><h1>N<sup>th</sup> Factorial</h1></label>
+The factorial of: <input type="numbers" id="num" placeholder="Enter a number" oninput="factorial()"> is <b><span id="factor"></span></b>
+<script>
+function factorial(){
+var num = parseInt(document.getElementById("num").value);
+var count = num;
+
+while(count > 1){
+  count--;
+  num = num * count;
+  }
+  document.getElementById("factor").innerHTML= num;
+  }
+</script>
+
+<label><h1>The Sum of the first n Number</h1></label>
+Enter Number: <input type="numbers" id="number" oninput="Sum()"> = <b><span id="first"></span></b>
+<script>
+function Sum(){
+var number = parseInt(document.getElementById("number").value);
+var count = number;
+
+  do{
+  count--;
+  number = number + count;
+  }
+  while(count > 0){
+  document.getElementById("first").innerHTML= number;
+  }
+  }
+</script>
+
+<label><h1>Calculate the Average of the First <i>n</i> Numbers</h1></label>
+Enter Number: <input type="numbers" id="nnumber" oninput="Calculate()"
+<p> = <b><span id="average"></span></b></p>
+<script>
+function Calculate(){
+var k = parseInt(document.getElementById("nnumber").value);
+var total = 0;
+
+for (let a = 1; a <= k; a++) {
+total = parseInt(total + a); 
+}
+  total = parseFloat(total/k)
+  document.getElementById("average").innerHTML=total;
+}
+</script>
+
+</head>
+</html>
