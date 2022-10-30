@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<h1>Income Tax Table</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Texable Income per Year</th>
+    <th>Income Tax Rate</th>
+  
+  </tr>
+  <tr>
+    <td> &#8369 250,000 and Below</td>
+    <td> 0%</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 250,000 to  &#8369 400,000</td>
+    <td>20% of the excess over  &#8369 250,000</td>
+  </tr>
+   <tr>
+    <td>Above  &#8369 400,000 to  &#8369 800,000</td>
+    <td> &#8369 30,000 + 25% of the excess over &#8369 400,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 800,000 to &#8369 2,000,000</td>
+    <td>&#8369 130,000 + 30% of the excess over &#8369 800,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 2,000,000 to &#8369 8,000,000</td>
+    <td>&#8369 490,000 + 32% of the excess over &#8369 2,000,000</td>
+  </tr>
+   <tr>
+    <td>Above &#8369 8,000,000</td>
+    <td>&#8369 2,410,000 + 35% of the excess over &#8369 8,000,000</td>
+  </tr>
+
+</table>
+</body>
+
+<body>
+
+<h1>Amount of Net Taxable #1</h1>
+
+<p>
+<label for="Bastax">Enter Basic Tax</label> 
+<input id="Bastax" name="Bastax" type="number">
+<button onclick="ComputeNetTaxable()">Compute NetTaxable</button>
+</p>
+ 
+
+<script>
+function ComputeNetTaxable()
+{
+      var a; 
+      a=Number(document.getElementById("Bastax").value);
+      
+    if (a<250000)
+        {
+        let z= 0+(a-0)*0;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }
+   else if (a>=250000 && a<=400000)  
+        {
+        let z= 250000+(a-0)*0.20;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')
+        }
+   else if (a>=400000 && a<= 800000)
+        {
+         let z= 30000+(a-400000)*0.25;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        } 
+   else if (a>=800000 && a<=2000000)
+        {
+        let z= 130000+(a-800000)*0.30;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else if (a>=2000000 && a<=8000000)
+        {
+        let z= 490000+(a-2000000)*0.32;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+  else 
+        {
+        let z=  2410000+(a-8000000)*0.35;
+        document.write('<h2>The Net Taxable is: &#8369 '+z+'</h2> <br>')  
+        }  
+}  
+</script>
+</body>
+
+</head>
+</html>
