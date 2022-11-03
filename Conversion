@@ -1,1 +1,67 @@
+<html> 
+<head> 
+ <meta charset="utf-8" /> 
+ <title>Buttons</title> 
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head> 
+<body> 
+    <li><a href="maryvee.w3spaces.com">Home</a></li>
+<h1 style= "text-align:center;height:40px; width:100%"> Conversion</h1>
+<br><br>
+<h1>Celsius to Fahrenheit</h1>
+ <button id='btn1' type="button" onclick="function1()">Compute fahrenheit</button>
 
+ <h1>Fahrenheit to Celsius</h2>
+ <button id='btn2' type="button" onclick="function2()">Compute celsius </button> 
+
+ <h1>Meters to Feet</h3>
+ <button id='btn3' type="button" onclick="function3()">Compute Meter </button> 
+
+ <h1>Feet to Meters</h4>
+ <button id='btn4' type="button" onclick="function4()">Compute Feet </button> 
+ <script> 
+ function function1() { 
+  let a='', b=32,x=5,y=9;
+
+   a=prompt('Enter Celsius:');
+
+   x=parseInt(5);
+   y=parseInt(9);
+   b=parseInt(32)
+
+   let z=(a * y/x) + b;
+
+   document.write('<h2>The fahrenheit is: '+z+'</h2> <br>')
+ } 
+ function function2() { 
+let a='', b=32,x=5,y=9;
+
+   a=prompt('Enter Fahrenheit:');
+
+   x=parseInt(5);
+   y=parseInt(9);
+   b=parseInt(32)
+
+   let z=(a-b) * y/x;
+
+   document.write('<h2>The Celsius is: '+z+'</h2> <br>') 
+ } 
+
+function function3() { 
+let a='';
+
+   a=prompt('Enter Meter');
+   let z=a * 3.28084 ;
+
+   document.write('<h2>The Feet is: '+z+'</h2> <br>') 
+}
+   function function4() { 
+let a='';
+
+   a=prompt('Enter Feet');
+   let z=a / 3.281;
+
+document.write('<h2>The Meter is: '+z+'</h2> <br>') 
+ } 
+</script>
+</body>
